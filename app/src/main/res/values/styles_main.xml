@@ -88,10 +88,6 @@
         <item name="android:padding">10dp</item>
     </style>
 
-    <style name="custom_checkbox" parent="@android:style/Widget.CompoundButton.CheckBox">
-        <item name="android:button">@drawable/checkbox_style_selector</item>
-    </style>
-
     <style name="account_layout_clickable">
         <item name="android:clickable">true</item>
         <item name="android:background">@drawable/layout_style_transparent_selector</item>
@@ -107,95 +103,12 @@
         <item name="android:paddingRight">15dp</item>
     </style>
 
-    <style name="settings_new_layout_clickable">
-        <item name="android:clickable">true</item>
-        <item name="android:background">@drawable/layout_style_white_selector</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:paddingLeft">15dp</item>
-        <item name="android:paddingRight">15dp</item>
-    </style>
-
-    <style name="create_new_chat_layout_clickable">
-        <item name="android:clickable">true</item>
-        <item name="android:background">@drawable/layout_style_white_selector</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:paddingLeft">10dp</item>
-        <item name="android:paddingRight">15dp</item>
-    </style>
-
     <style name="settings_grid_nickname">
         <item name="android:textSize">10sp</item>
         <item name="android:textColor">@color/gray_dark</item>
     </style>
 
-    <style name="style_title_btn_red_16">
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:paddingLeft">15dp</item>
-        <item name="android:paddingRight">15dp</item>
-        <item name="android:background">@drawable/btn_style_circle_red_selector</item>
-    </style>
 
-    <style name="style_title_btn_red_14">
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:paddingLeft">15dp</item>
-        <item name="android:paddingRight">15dp</item>
-        <item name="android:background">@drawable/btn_style_circle_red_selector</item>
-    </style>
-
-    <style name="style_title_btn_orange_16">
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:paddingLeft">15dp</item>
-        <item name="android:paddingRight">15dp</item>
-        <item name="android:background">@drawable/btn_style_circle_orange_selector</item>
-    </style>
-
-    <style name="style_title_btn_orange_14">
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:paddingLeft">15dp</item>
-        <item name="android:paddingRight">15dp</item>
-        <item name="android:background">@drawable/btn_style_circle_orange_selector</item>
-    </style>
-
-    <style name="btn_clickable_circle">
-        <item name="android:textColor">@color/white</item>
-        <item name="android:background">@drawable/btn_style_circle_orange_selector</item>
-    </style>
-
-    <style name="btn_clickable_square">
-        <item name="android:textColor">@color/white</item>
-        <item name="android:background">@drawable/btn_style_square_red_selector</item>
-    </style>
-
-    <style name="btn_unclickable_circle">
-        <item name="android:enabled">false</item>
-        <item name="android:textColor">@color/gray</item>
-        <item name="android:background">@drawable/btn_style_circle_unclickable</item>
-    </style>
-
-    <style name="add_content_dialog" parent="android:Animation">
-        <item name="@android:windowEnterAnimation">@anim/dialog_in</item>
-        <item name="@android:windowExitAnimation">@anim/dialog_out</item>
-        <item name="@android:windowFullscreen">true</item>
-    </style>
-
-    <style name="group_filter_dialog" parent="android:Animation">
-        <item name="@android:windowEnterAnimation">@anim/slide_left_in</item>
-        <item name="@android:windowExitAnimation">@anim/slide_right_out</item>
-        <item name="@android:windowFullscreen">true</item>
-    </style>
-
-    <style name="custom_progress_dialog" parent="@android:style/Theme.Light.Panel">
-        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
-    </style>
-    
-    <style name="lucky_money_dialog" parent="@android:style/Theme.Light.Panel">
-        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
-        <item name="android:backgroundDimEnabled">true</item>
-    </style>
 
     <style name="chat_group_description">
         <item name="android:textSize">14sp</item>
@@ -279,16 +192,6 @@
         <item name="android:layout_marginTop">2dp</item>
     </style>
 
-    <style name="float_view_anim">
-        <item name="@android:windowEnterAnimation">@anim/float_window_slide_in</item>
-        <item name="@android:windowExitAnimation">@anim/float_window_slide_out</item>
-    </style>
 
-    <style name="home_meeting_quantity">
-        <item name="android:textColor">@color/gray_dark</item>
-        <item name="android:textSize">12sp</item>
-        <item name="android:paddingLeft">2dp</item>
-        <item name="android:paddingRight">2dp</item>
-        <item name="android:background">@drawable/home_meeting_quantity_style</item>
-    </style>
+
 </resources>

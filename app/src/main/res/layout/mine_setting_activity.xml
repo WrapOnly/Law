@@ -47,7 +47,7 @@
     <TextView style="@style/devide_line"/>
 
     <RelativeLayout
-        android:id="@+id/rl_work_record"
+        android:id="@+id/rl_account_manage"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@drawable/layout_style_transparent_selector"
@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"
-            android:text="我的工作记录"/>
+            android:text="账号管理"/>
 
         <TextView
             android:id="@+id/tv_city"
@@ -85,7 +85,7 @@
             android:src="@mipmap/more"/>
 
         <ImageView
-            android:id="@+id/iv_work_record"
+            android:id="@+id/iv_head"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_centerVertical="true"
