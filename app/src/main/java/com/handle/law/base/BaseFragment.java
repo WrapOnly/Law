@@ -6,6 +6,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.support.v4.app.Fragment;
+import android.view.View;
 
 import java.util.List;
 
@@ -41,7 +42,13 @@ public abstract class BaseFragment extends Fragment {
 //			WebuyApp.getInstance(BaseFragment.this.getActivity()).handleForegroundEvnent(false);
 		}
 	}
-	
+
+    //init view
+    protected abstract void initViews(View _view);
+
+    //register listener
+    protected abstract void setListener();
+
 	public boolean isAppOnForeground() {
         // Returns a list of application processes that are running on the
         // device
