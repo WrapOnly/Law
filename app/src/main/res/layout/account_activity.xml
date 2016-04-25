@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/back"/>
+
+        <TextView
+            style="@style/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_back"
+            android:text="我"/>
+
+        <TextView
+            style="@style/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="个人信息"/>
+
+        <ImageView
+            android:id="@+id/iv_my_share"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:visibility="gone"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/ic_launcher"/>
+    </RelativeLayout>
+
+    <TextView style="@style/devide_line"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_account_manage"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/layout_style_transparent_selector"
+        android:clickable="true"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/style_account_name"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textSize="18sp"
+            android:text="头像"/>
+
+        <TextView
+            android:id="@+id/tv_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+
+            android:paddingRight="10dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:id="@+id/iv_mycity_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:paddingRight="15dp"
+            android:src="@mipmap/more"/>
+
+        <ImageView
+            android:id="@+id/iv_head"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toLeftOf="@+id/iv_mycity_more"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/ic_launcher"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/background"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_new_message"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/layout_style_transparent_selector"
+        android:clickable="true"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/style_account_name"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="名字"/>
+
+        <ImageView
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:paddingRight="15dp"
+            android:src="@mipmap/more"/>
+        <TextView
+            android:id="@+id/tv_new_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:text="昵称"
+            android:layout_toLeftOf="@+id/more"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+    <TextView style="@style/devide_line"/>
+    <RelativeLayout
+        android:id="@+id/rl_yinsi"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/layout_style_transparent_selector"
+        android:clickable="true"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/style_account_name"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="账号"/>
+        <ImageView
+            android:id="@+id/name_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:paddingRight="15dp"
+            android:visibility="invisible"
+            android:src="@mipmap/more"/>
+
+        <TextView
+            android:id="@+id/tv_yinsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/name_more"
+            android:paddingRight="10dp"
+            android:text="123456"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+    <TextView style="@style/devide_line"/>
+    <RelativeLayout
+        android:id="@+id/rl_qr_code"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/layout_style_transparent_selector"
+        android:clickable="true"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/style_account_name"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textSize="18sp"
+            android:text="我的二维码"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+
+            android:paddingRight="10dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:id="@+id/iv_mycity_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:paddingRight="15dp"
+            android:src="@mipmap/more"/>
+
+        <ImageView
+            android:id="@+id/qr_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toLeftOf="@+id/iv_mycity_more"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/ic_launcher"/>
+    </RelativeLayout>
+    <TextView style="@style/devide_line"/>
+    <RelativeLayout
+        android:id="@+id/rl_feed_back"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/layout_style_transparent_selector"
+        android:clickable="true"
+        android:gravity="center_vertical">
+        <TextView
+            style="@style/style_account_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="我的地址"/>
+
+        <TextView
+            android:id="@+id/tv_feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:paddingRight="15dp"
+            android:src="@mipmap/more"/>
+    </RelativeLayout>
+
+    <TextView style="@style/devide_line"/>
+
+    <TextView
+        style="@style/devide_line"
+        android:layout_marginTop="40dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_log_out"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/layout_style_transparent_selector"
+        android:clickable="true"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/style_account_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:text="退出登录"/>
+    </RelativeLayout>
+
+    <TextView style="@style/devide_line"/>
+</LinearLayout>

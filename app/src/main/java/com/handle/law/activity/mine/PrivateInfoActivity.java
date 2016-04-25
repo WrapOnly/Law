@@ -33,6 +33,23 @@ public class PrivateInfoActivity extends BaseActivity {
 
     @Override
     protected void setListener() {
+        this.addMeVerifyToggleBtn.setOnToggleChanged(new ToggleButton.OnToggleChanged() {
+            @Override
+            public void onToggle(boolean isChecked) {
 
+            }
+        });
+        this.searchToggleBtn.setOnToggleChanged(new ToggleButton.OnToggleChanged() {
+            @Override
+            public void onToggle(boolean isChecked) {
+
+            }
+        });
+        this.imageUpdateToggleBtn.setOnToggleChanged(new ToggleButton.OnToggleChanged() {
+            @Override
+            public void onToggle(boolean isChecked) {
+
+            }
+        });
     }
 }

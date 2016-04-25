@@ -36,6 +36,29 @@ public class SetMessageNotifyActivity extends BaseActivity {
 
     @Override
     protected void setListener() {
+        this.messageDetailToggleBtn.setOnToggleChanged(new ToggleButton.OnToggleChanged() {
+            @Override
+            public void onToggle(boolean isChecked) {
 
+            }
+        });
+        this.soundToggleBtn.setOnToggleChanged(new ToggleButton.OnToggleChanged() {
+            @Override
+            public void onToggle(boolean isChecked) {
+
+            }
+        });
+        this.vibrateToggleBtn.setOnToggleChanged(new ToggleButton.OnToggleChanged() {
+            @Override
+            public void onToggle(boolean isChecked) {
+
+            }
+        });
+        this.imageUpdateToggleBtn.setOnToggleChanged(new ToggleButton.OnToggleChanged() {
+            @Override
+            public void onToggle(boolean isChecked) {
+
+            }
+        });
     }
 }
