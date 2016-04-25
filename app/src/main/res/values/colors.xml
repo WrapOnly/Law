@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#FFFFFF</color>
+    <color name="white_light">#F6F6F6</color>
+    <color name="black">#000000</color>
+    <color name="background">#F3F3F3</color>
+    <color name="devide_line">#EEEEEE</color>
+    <color name="gray_stoke">#DDDDDD</color>
+    <color name="gray">#CCCCCC</color>
+    <color name="gray_line">#66999999</color>
+    <color name="gray_dark">#666666</color>
+    <color name="gray_word">#999999</color>
+    <color name="gray_light">#f9f9f9</color>
+    <color name="red">#FF0000</color>
+    <color name="lucky_money_red">#EE0044</color>
+    <color name="red_fade">#CC0000</color>
+    <color name="green">#00FF00</color>
+    <color name="green_dark">#679A01</color>
+    <color name="green_fade">#67CC01</color>
+    <color name="green_default">#669900</color>
+    <color name="orange">#FF8800</color>
+    <color name="orange_yellow">#FF6600</color>
+    <color name="orange_yellow_fade">#FFCC00</color>
+    <color name="orange_transparent">#66FF8800</color>
+    <color name="orange_fade">#DD7700</color>
+    <color name="transparent">#00000000</color>
+    <color name="half_transparent">#AA000000</color>
+    <color name="contacts_realname">#666666</color>
+    <color name="yellow">#F99503</color>
+    <color name="black_gray">#333333</color>
+    <color name="acount_name">#003366</color>
+    <color name="progress_background">#DDDDDDDD</color>
+    <color name="id_background">#669900</color>
+    <color name="chat_time_bg_color">#F3F3F3</color>
+    <color name="orange_menu_press">#DD7700</color>
+    <color name="orange_net_work_bg">#FFEECC</color>
+    <color name="black_translucent">#88000000</color>
+    <color name="blue">#00CCFF</color>
+    <color name="finder_mask">#60000000</color>
+
+</resources>
