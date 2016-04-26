@@ -128,9 +128,13 @@ public class MainActivity extends BaseFragmentActivity implements View.OnClickLi
     public void loadFragmentData(){
         if (this.allFragments.isEmpty()){
             this.allFragments.add(new FriendFragment());
-            this.allFragments.add(new MyOfficeFragment());
-            this.allFragments.add(new DocumentsFragment());
-            this.allFragments.add(new InquireFragment());
+            if (LawApplication.getInstance().isFirstLogin){
+                this.allFragments.add(new MyOfficeFragment());
+            }
+            else {
+                this.allFragments.add(new DocumentsFragment());
+                this.allFragments.add(new InquireFragment());
+            }
             this.allFragments.add(new MineFragment());
         }
     }

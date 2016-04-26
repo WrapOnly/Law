@@ -54,47 +54,54 @@
             android:src="@mipmap/more" />
     </RelativeLayout>
 
+<LinearLayout
+    android:id="@+id/order_detail01_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    style="?android:attr/buttonBarStyle"
+    android:layout_marginTop="8dp" >
+
+    <Button
+        android:id="@+id/btn_account_cash_table"
+        android:layout_width="0dp"
+        android:layout_height="34dp"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_weight="1"
+        android:alpha="1"
+        android:text="现金账户统计表"
         android:background="@color/white"
-        android:orientation="horizontal"
-        style="?android:attr/buttonBarStyle"
-        android:layout_marginTop="8dp" >
-
-        <Button
-            android:id="@+id/btn_account_cash_table"
-            android:layout_width="0dp"
-            android:layout_height="34dp"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_weight="1"
-            android:alpha="1"
-            android:text="现金账户统计表"
-            android:background="@color/white"
-            android:textColor="@color/black"
-            android:textSize="14sp" />
-        <View
-            android:layout_height="match_parent"
-            android:layout_width="0.5dp"
-            android:layout_marginTop="5dp"
-            android:background="@color/black"
-            style="@style/devide_line"/>
-        <Button
-            android:id="@+id/btn_save_good_table"
-            android:layout_width="0dp"
-            android:layout_height="34dp"
-            android:layout_marginLeft="4dp"
-            android:layout_weight="1"
-            android:background="@color/white"
-            style="?android:attr/buttonBarButtonStyle"
-            android:text="存货统计表"
-            android:textColor="@color/black"
-            android:textSize="14sp" />
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+    <View
+        android:layout_height="match_parent"
+        android:layout_width="0.5dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/black"
+        style="@style/devide_line"/>
+    <Button
+        android:id="@+id/btn_save_good_table"
+        android:layout_width="0dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="4dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        style="?android:attr/buttonBarButtonStyle"
+        android:text="存货统计表"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
 
 
-    </LinearLayout>
+</LinearLayout>
     <View android:layout_height="1dp" style="@style/devide_line"/>
     <LinearLayout
+        android:id="@+id/order_detail02_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
@@ -128,6 +135,7 @@
             android:background="@color/white"
             android:textColor="@color/black"
             android:textSize="14sp" />
+    </LinearLayout>
     </LinearLayout>
     <TextView
         android:layout_width="match_parent"

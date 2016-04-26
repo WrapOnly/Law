@@ -11,9 +11,9 @@ import android.util.Log;
 public class LawApplication extends Application {
     private static final String TAG = "LawApplication";
 
-    private static LawApplication instance		= null;
-    public static Activity currentActivity 	    = null;
-
+    private static LawApplication instance		 = null;
+    public static Activity currentActivity 	  = null;
+    public static boolean isFirstLogin          = true;
 
     @Override
     public void onCreate() {

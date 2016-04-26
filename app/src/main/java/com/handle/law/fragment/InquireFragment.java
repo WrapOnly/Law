@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.handle.law.R;
@@ -19,6 +20,7 @@ public class InquireFragment extends BaseFragment implements View.OnClickListene
 
     /**-------明细账查询------*/
     private RelativeLayout rlOrderDetailQuery;
+    private LinearLayout rlOrderDetailQueryLayout;
     /**更多明细账查询操作*/
     private ImageView   ivOrderDetailMore;
     /**现金账户*/
@@ -32,6 +34,7 @@ public class InquireFragment extends BaseFragment implements View.OnClickListene
 
     /**----报表查询------*/
     private RelativeLayout rlTableQuery;
+    private LinearLayout rlTableQueryLayout;
     /**更多明细账查询操作*/
     private ImageView   ivTableDetailMore;
     /**现金账户统计表*/
@@ -57,25 +60,9 @@ public class InquireFragment extends BaseFragment implements View.OnClickListene
 
     @Override
     protected void initViews(View _view) {
-        /**
-         * iv_order_more
-         * btn_account_cash
-         * btn_account_detail
-         * btn_project
-         * btn_help_cul
-         *
-         *
-         *rl_table_query
-         * iv_table_mores
-         * btn_account_cash_table
-         * btn_save_good_table
-         * btn_project_balance_table
-         * btn_help_cul_table
-         *
-         *
-         * rl_order_manage
-         */
+
         rlOrderDetailQuery  = (RelativeLayout) _view.findViewById(R.id.rl_order_detail_query);
+        rlOrderDetailQueryLayout  = (LinearLayout) _view.findViewById(R.id.query_detail_layout);
         ivOrderDetailMore   = (ImageView) _view.findViewById(R.id.iv_order_more);
         btnAccountCash      = (Button) _view.findViewById(R.id.btn_account_cash);
         btnSaveDetail       = (Button) _view.findViewById(R.id.btn_account_detail);
@@ -83,6 +70,7 @@ public class InquireFragment extends BaseFragment implements View.OnClickListene
         btnHelpCalculate    = (Button) _view.findViewById(R.id.btn_help_cul);
 
         rlTableQuery        = (RelativeLayout) _view.findViewById(R.id.rl_table_query);
+        rlTableQueryLayout  = (LinearLayout) _view.findViewById(R.id.order_detail01_layout);
         ivTableDetailMore   = (ImageView) _view.findViewById(R.id.iv_table_mores);
         btnAccountCash      = (Button) _view.findViewById(R.id.btn_account_cash_table);
         btnSaveDetail       = (Button) _view.findViewById(R.id.btn_save_good_table);
@@ -106,6 +94,7 @@ public class InquireFragment extends BaseFragment implements View.OnClickListene
         btnSaveDetail.setOnClickListener(this);
         btnProject.setOnClickListener(this);
         btnHelpCalculate.setOnClickListener(this);
+
         rlOrderManage.setOnClickListener(this);
     }
 
