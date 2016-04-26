@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/request_ll_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_table_query"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/layout_style_transparent_selector"
+        android:clickable="true">
+        <ImageView
+            android:id="@+id/iv_work_records"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/ic_launcher" />
+        <TextView
+            android:layout_toRightOf="@+id/iv_work_records"
+            style="@style/style_account_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="报表查询" />
+
+        <TextView
+            android:id="@+id/tv_citys"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_table_mores"
+            android:paddingRight="10dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_table_mores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:paddingRight="15dp"
+
+            android:src="@mipmap/more" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        style="?android:attr/buttonBarStyle"
+        android:layout_marginTop="8dp" >
+
+        <Button
+            android:id="@+id/btn_account_cash_table"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_weight="1"
+            android:alpha="1"
+            android:text="现金账户统计表"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+        <View
+            android:layout_height="match_parent"
+            android:layout_width="0.5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/black"
+            style="@style/devide_line"/>
+        <Button
+            android:id="@+id/btn_save_good_table"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            style="?android:attr/buttonBarButtonStyle"
+            android:text="存货统计表"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+    <View android:layout_height="1dp" style="@style/devide_line"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        style="?android:attr/buttonBarStyle">
+
+        <Button
+            android:id="@+id/btn_project_balance_table"
+            android:layout_width="0dp"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:text="会计科目余额表"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+        <View
+            android:layout_height="match_parent"
+            android:layout_width="0.5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/black"
+            style="@style/devide_line"/>
+        <Button
+            android:id="@+id/btn_help_cul_table"
+            android:layout_width="0dp"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_height="34dp"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:text="辅助核算统计表"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/black" />
+    <RelativeLayout
+        android:id="@+id/rl_order_manage"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/layout_style_transparent_selector"
+        android:clickable="true">
+        <ImageView
+            android:id="@+id/iv_work_record"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/ic_launcher" />
+        <TextView
+            android:layout_toRightOf="@+id/iv_work_record"
+            style="@style/style_account_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="合同管理" />
+
+        <TextView
+            android:id="@+id/tv_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_mycity_more"
+            android:paddingRight="10dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_mycity_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:paddingRight="15dp"
+
+            android:src="@mipmap/more" />
+    </RelativeLayout>
+</LinearLayout>
