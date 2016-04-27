@@ -21,7 +21,7 @@
         android:layout_height="wrap_content" >
 
         <com.handle.law.component.view.MainTabView
-            android:id="@+id/tb_home"
+            android:id="@+id/tb_friend"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -32,47 +32,47 @@
             diy:textColor="@color/gray_dark" />
 
         <com.handle.law.component.view.MainTabView
-            android:id="@+id/tb_post"
+            android:id="@+id/tb_my_office"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:clickable="true"
             android:focusable="true"
             diy:iconDrawable="@mipmap/main_chatb"
-            diy:text="二"
+            diy:text="我的办公"
             diy:textColor="@color/gray_dark" />
 
         <com.handle.law.component.view.MainTabView
-            android:id="@+id/tb_chat"
+            android:id="@+id/tb_document"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:clickable="true"
             android:focusable="true"
             diy:iconDrawable="@mipmap/main_chatb"
-            diy:text="san"
+            diy:text="单据"
             diy:textColor="@color/gray_dark" />
 
         <com.handle.law.component.view.MainTabView
-            android:id="@+id/tb_contacts"
+            android:id="@+id/tb_inquire"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:clickable="true"
             android:focusable="true"
             diy:iconDrawable="@mipmap/main_chatb"
-            diy:text="四"
+            diy:text="列表查询"
             diy:textColor="@color/gray_dark" />
 
         <com.handle.law.component.view.MainTabView
-            android:id="@+id/tb_settings"
+            android:id="@+id/tb_mine"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:clickable="true"
             android:focusable="true"
             diy:iconDrawable="@mipmap/main_chatb"
-            diy:text="五"
+            diy:text="我的"
             diy:textColor="@color/gray_dark" />
     </LinearLayout>
 

@@ -38,7 +38,6 @@ public class MainActivity extends BaseFragmentActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         this.loadFragmentData();
-
         this.initViews();
         this.setListener();
     }
@@ -46,12 +45,21 @@ public class MainActivity extends BaseFragmentActivity implements View.OnClickLi
     @Override
     protected void initViews() {
         mTabView = new MainTabView[allFragments.size()];
-        mTabView[MainConstant.BOTTOM_TAB_FRIEND] 	= (MainTabView) findViewById(R.id.tb_home);
-        mTabView[MainConstant.BOTTOM_TAB_OFFICE] 	= (MainTabView) findViewById(R.id.tb_post);
-        mTabView[MainConstant.BOTTOM_TAB_DOCUMENT] 	= (MainTabView) findViewById(R.id.tb_contacts);
-        mTabView[MainConstant.BOTTOM_TAB_INQURIE] 	= (MainTabView) findViewById(R.id.tb_settings);
-        mTabView[MainConstant.BOTTOM_TAB_MINE] 		= (MainTabView) findViewById(R.id.tb_chat);
-
+        mTabView[MainConstant.BOTTOM_TAB_FRIEND] 	= (MainTabView) findViewById(R.id.tb_friend);
+        mTabView[MainConstant.BOTTOM_TAB_OFFICE] 	= (MainTabView) findViewById(R.id.tb_my_office);
+        mTabView[MainConstant.BOTTOM_TAB_DOCUMENT] 	= (MainTabView) findViewById(R.id.tb_document);
+        mTabView[MainConstant.BOTTOM_TAB_INQURIE] 	= (MainTabView) findViewById(R.id.tb_inquire);
+        mTabView[MainConstant.BOTTOM_TAB_MINE] 		= (MainTabView) findViewById(R.id.tb_mine);
+        if (LawApplication.getInstance().isFirstLogin){
+            mTabView[MainConstant.BOTTOM_TAB_OFFICE].setVisibility(View.VISIBLE);
+            mTabView[MainConstant.BOTTOM_TAB_DOCUMENT].setVisibility(View.GONE);
+            mTabView[MainConstant.BOTTOM_TAB_INQURIE].setVisibility(View.GONE);
+        }
+        else {
+            mTabView[MainConstant.BOTTOM_TAB_OFFICE].setVisibility(View.GONE);
+            mTabView[MainConstant.BOTTOM_TAB_DOCUMENT].setVisibility(View.VISIBLE);
+            mTabView[MainConstant.BOTTOM_TAB_INQURIE].setVisibility(View.VISIBLE);
+        }
         mTabView[MainConstant.BOTTOM_TAB_FRIEND].setIconDrable(R.mipmap.main_chatf);
         mTabView[MainConstant.BOTTOM_TAB_FRIEND].setTextColor(getResources().getColor(R.color.black));
 
@@ -77,23 +85,23 @@ public class MainActivity extends BaseFragmentActivity implements View.OnClickLi
         mFragment.onPause();
         reSetView();
         switch (view.getId()) {
-            case R.id.tb_home:
+            case R.id.tb_friend:
                 mTabView[MainConstant.BOTTOM_TAB_FRIEND].setIconDrable(R.mipmap.main_chatf);
                 this.currentFramentIndex = MainConstant.BOTTOM_TAB_FRIEND;
                 break;
-            case R.id.tb_post:
+            case R.id.tb_my_office:
                 mTabView[MainConstant.BOTTOM_TAB_OFFICE].setIconDrable(R.mipmap.main_chatf);
                 this.currentFramentIndex = MainConstant.BOTTOM_TAB_OFFICE;
                 break;
-            case R.id.tb_chat:
+            case R.id.tb_document:
                 mTabView[MainConstant.BOTTOM_TAB_DOCUMENT].setIconDrable(R.mipmap.main_chatf);
                 this.currentFramentIndex = MainConstant.BOTTOM_TAB_DOCUMENT;
                 break;
-            case R.id.tb_contacts:
+            case R.id.tb_inquire:
                 mTabView[MainConstant.BOTTOM_TAB_INQURIE].setIconDrable(R.mipmap.main_chatf);
                 this.currentFramentIndex = MainConstant.BOTTOM_TAB_INQURIE;
                 break;
-            case R.id.tb_settings:
+            case R.id.tb_mine:
                 mTabView[MainConstant.BOTTOM_TAB_MINE].setIconDrable(R.mipmap.main_chatf);
                 this.currentFramentIndex = MainConstant.BOTTOM_TAB_MINE;
                 break;
@@ -128,13 +136,9 @@ public class MainActivity extends BaseFragmentActivity implements View.OnClickLi
     public void loadFragmentData(){
         if (this.allFragments.isEmpty()){
             this.allFragments.add(new FriendFragment());
-            if (LawApplication.getInstance().isFirstLogin){
-                this.allFragments.add(new MyOfficeFragment());
-            }
-            else {
-                this.allFragments.add(new DocumentsFragment());
-                this.allFragments.add(new InquireFragment());
-            }
+            this.allFragments.add(new MyOfficeFragment());
+            this.allFragments.add(new DocumentsFragment());
+            this.allFragments.add(new InquireFragment());
             this.allFragments.add(new MineFragment());
         }
     }

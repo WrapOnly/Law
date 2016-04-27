@@ -37,6 +37,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        super.onCreateView(inflater, container, savedInstanceState);
         View view = inflater.inflate(R.layout.mine_fragment_layout, container, false);
         this.initViews(view);
         this.setListener();

@@ -8,15 +8,24 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.EditText;
 
+import com.handle.law.LawApplication;
+
 public abstract class BaseActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        LawApplication.currentActivity = this;
         // Theme.NoTitleBar
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         // inputMode
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        LawApplication.currentActivity = this;
     }
 
     //init view

@@ -5,8 +5,11 @@ import android.app.ActivityManager.RunningAppProcessInfo;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.PowerManager;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 
 import java.util.List;
 
@@ -17,8 +20,14 @@ public abstract class BaseFragment extends Fragment {
 		super.onCreate(savedInstanceState);
 //		WebuyApp.currentActivity = getActivity();
 	}
-	
-	@Override
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return super.onCreateView(inflater, container, savedInstanceState);
+    }
+
+    @Override
 	public void onResume() {
 		super.onResume();
 //		WebuyApp.currentActivity = getActivity();

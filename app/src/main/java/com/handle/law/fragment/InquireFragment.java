@@ -52,6 +52,7 @@ public class InquireFragment extends BaseFragment implements View.OnClickListene
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        super.onCreateView(inflater, container, savedInstanceState);
         View view = inflater.inflate(R.layout.query_order_list_activity, container, false);
         this.initViews(view);
         this.setListener();

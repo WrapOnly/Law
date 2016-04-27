@@ -17,7 +17,8 @@ public class DocumentsFragment extends BaseFragment implements View.OnClickListe
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.mine_fragment_layout, container, false);
+        super.onCreateView(inflater, container, savedInstanceState);
+        View view = inflater.inflate(R.layout.my_document_fragment_layout, container, false);
         this.initViews(view);
         this.setListener();
         return view;

@@ -8,6 +8,8 @@ import android.os.PowerManager;
 import android.support.v4.app.FragmentActivity;
 import android.view.Window;
 
+import com.handle.law.LawApplication;
+
 import java.util.List;
 
 public abstract class BaseFragmentActivity extends FragmentActivity {
@@ -17,8 +19,7 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
 	@Override
 	protected void onCreate(Bundle arg0) {
 		super.onCreate(arg0);
-//		WebuyApp.currentActivity = this;
-//		initLanguage();
+		LawApplication.currentActivity = this;
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 	}
 	

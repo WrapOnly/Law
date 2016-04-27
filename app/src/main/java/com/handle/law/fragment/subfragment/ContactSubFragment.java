@@ -1,4 +1,4 @@
-package com.handle.law.fragment;
+package com.handle.law.fragment.subfragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,18 +10,18 @@ import com.handle.law.R;
 import com.handle.law.base.BaseFragment;
 
 /**
- * Created by Administrator on 2016/4/25.
+ * Created by Administrator on 2016/4/28.
  */
-public class MyOfficeFragment extends BaseFragment implements View.OnClickListener {
+public class ContactSubFragment extends BaseFragment implements View.OnClickListener {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        View view = inflater.inflate(R.layout.my_office_fragment_layout, container, false);
-        this.initViews(view);
+        View views = inflater.inflate(R.layout.contact_sub_fragment_activity, container, false);
+        this.initViews(views);
         this.setListener();
-        return view;
+        return views;
     }
 
     @Override
@@ -38,6 +38,4 @@ public class MyOfficeFragment extends BaseFragment implements View.OnClickListen
     public void onClick(View v) {
 
     }
-
-
 }
