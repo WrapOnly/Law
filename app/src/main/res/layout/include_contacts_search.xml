@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_chat_at_list_search"
+    style="@style/layout_white_backgroung_style"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingBottom="8dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="8dp" >
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/back"/>
+    <com.webuy.w.components.view.EditTextWithDel
+        android:id="@+id/include_search_et_content"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_toRightOf="@+id/iv_back"
+        android:layout_toLeftOf="@+id/include_search_tv_action"
+        android:background="@drawable/edit_style_selector"
+        android:cursorVisible="true"
+        android:hint="@string/contact_search_hint"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:maxLength="12"
+        android:paddingLeft="5dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray_word"
+        android:textCursorDrawable="@drawable/editable_edit_view_cursor_color"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/include_search_tv_action"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/red"
+        android:textSize="16sp" />
+
+</RelativeLayout>
