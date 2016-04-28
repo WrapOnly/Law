@@ -50,16 +50,17 @@ public class MainActivity extends BaseFragmentActivity implements View.OnClickLi
         mTabView[MainConstant.BOTTOM_TAB_DOCUMENT] 	= (MainTabView) findViewById(R.id.tb_document);
         mTabView[MainConstant.BOTTOM_TAB_INQURIE] 	= (MainTabView) findViewById(R.id.tb_inquire);
         mTabView[MainConstant.BOTTOM_TAB_MINE] 		= (MainTabView) findViewById(R.id.tb_mine);
-        if (LawApplication.getInstance().isFirstLogin){
-            mTabView[MainConstant.BOTTOM_TAB_OFFICE].setVisibility(View.VISIBLE);
-            mTabView[MainConstant.BOTTOM_TAB_DOCUMENT].setVisibility(View.GONE);
-            mTabView[MainConstant.BOTTOM_TAB_INQURIE].setVisibility(View.GONE);
-        }
-        else {
-            mTabView[MainConstant.BOTTOM_TAB_OFFICE].setVisibility(View.GONE);
-            mTabView[MainConstant.BOTTOM_TAB_DOCUMENT].setVisibility(View.VISIBLE);
-            mTabView[MainConstant.BOTTOM_TAB_INQURIE].setVisibility(View.VISIBLE);
-        }
+        /**暂时先注释，后面做登录之后进行切换使用*/
+//        if (LawApplication.getInstance().isFirstLogin){
+//            mTabView[MainConstant.BOTTOM_TAB_OFFICE].setVisibility(View.VISIBLE);
+//            mTabView[MainConstant.BOTTOM_TAB_DOCUMENT].setVisibility(View.GONE);
+//            mTabView[MainConstant.BOTTOM_TAB_INQURIE].setVisibility(View.GONE);
+//        }
+//        else {
+//            mTabView[MainConstant.BOTTOM_TAB_OFFICE].setVisibility(View.GONE);
+//            mTabView[MainConstant.BOTTOM_TAB_DOCUMENT].setVisibility(View.VISIBLE);
+//            mTabView[MainConstant.BOTTOM_TAB_INQURIE].setVisibility(View.VISIBLE);
+//        }
         mTabView[MainConstant.BOTTOM_TAB_FRIEND].setIconDrable(R.mipmap.main_chatf);
         mTabView[MainConstant.BOTTOM_TAB_FRIEND].setTextColor(getResources().getColor(R.color.black));
 

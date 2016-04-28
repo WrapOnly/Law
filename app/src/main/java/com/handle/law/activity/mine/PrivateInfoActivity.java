@@ -1,7 +1,8 @@
 package com.handle.law.activity.mine;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
+import android.view.View;
+import android.widget.RelativeLayout;
 
 import com.handle.law.R;
 import com.handle.law.base.BaseActivity;
@@ -12,14 +13,19 @@ import com.handle.law.component.togglebutton.ToggleButton;
  */
 public class PrivateInfoActivity extends BaseActivity {
 
-    private ToggleButton addMeVerifyToggleBtn;
-    private ToggleButton searchToggleBtn;
-    private ToggleButton imageUpdateToggleBtn;
+    //加我时需要验证
+    private ToggleButton    addMeVerifyToggleBtn;
+    //不让其他人看我
+    private ToggleButton    limitOhterSeeMeToggleBtn;
+    //动态图片更新
+    private ToggleButton    imageUpdateToggleBtn;
+    //不看他人的
+    private RelativeLayout  rlNotSeeOtherDynamic;
 
     @Override
-    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
-        setContentView(R.layout.set_message_notify_activity);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.set_private_info_activity);
         this.initViews();
         this.setListener();
     }
@@ -27,8 +33,9 @@ public class PrivateInfoActivity extends BaseActivity {
     @Override
     protected void initViews() {
         this.addMeVerifyToggleBtn   = (ToggleButton) findViewById(R.id.tb_message_detail);
-        this.searchToggleBtn        = (ToggleButton) findViewById(R.id.tb_is_sound);
-        this.imageUpdateToggleBtn   = (ToggleButton) findViewById(R.id.tb_is_update_image);
+        this.limitOhterSeeMeToggleBtn = (ToggleButton) findViewById(R.id.tb_is_limit_other);
+        this.imageUpdateToggleBtn   = (ToggleButton) findViewById(R.id.tb_is_show_dynamic_image_update);
+        this.rlNotSeeOtherDynamic   = (RelativeLayout) findViewById(R.id.rl_limit_not_see_other);
     }
 
     @Override
@@ -39,7 +46,7 @@ public class PrivateInfoActivity extends BaseActivity {
 
             }
         });
-        this.searchToggleBtn.setOnToggleChanged(new ToggleButton.OnToggleChanged() {
+        this.limitOhterSeeMeToggleBtn.setOnToggleChanged(new ToggleButton.OnToggleChanged() {
             @Override
             public void onToggle(boolean isChecked) {
 
@@ -48,6 +55,12 @@ public class PrivateInfoActivity extends BaseActivity {
         this.imageUpdateToggleBtn.setOnToggleChanged(new ToggleButton.OnToggleChanged() {
             @Override
             public void onToggle(boolean isChecked) {
+
+            }
+        });
+        this.rlNotSeeOtherDynamic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
             }
         });

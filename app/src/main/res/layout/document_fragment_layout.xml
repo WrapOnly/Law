@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <TextView
+            style="@style/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="单据"/>
+
+    </RelativeLayout>
+    <View style="@style/devide_line"/>
     <GridView
+        android:layout_marginTop="30dp"
         android:id="@+id/gv_document_fragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:numColumns="2"
         android:columnWidth="90dp"
         android:scrollbars="none"
+        android:gravity="center"
         android:horizontalSpacing="10dp"
         android:verticalSpacing="10dp"
+        android:listSelector="@drawable/layout_style_transparent_selector"
         />
 </LinearLayout>

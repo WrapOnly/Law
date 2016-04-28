@@ -1,7 +1,6 @@
 package com.handle.law.activity.mine;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 
 import com.handle.law.R;
 import com.handle.law.base.BaseActivity;
@@ -19,8 +18,8 @@ public class SetMessageNotifyActivity extends BaseActivity {
 
 
     @Override
-    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.set_message_notify_activity);
         this.initViews();
         this.setListener();

@@ -61,7 +61,6 @@ public class InquireFragment extends BaseFragment implements View.OnClickListene
 
     @Override
     protected void initViews(View _view) {
-
         rlOrderDetailQuery  = (RelativeLayout) _view.findViewById(R.id.rl_order_detail_query);
         rlOrderDetailQueryLayout  = (LinearLayout) _view.findViewById(R.id.query_detail_layout);
         ivOrderDetailMore   = (ImageView) _view.findViewById(R.id.iv_order_more);
@@ -103,8 +102,8 @@ public class InquireFragment extends BaseFragment implements View.OnClickListene
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.rl_order_detail_query:
-                break;
-            case R.id.iv_order_more:
+                int isVisibility = rlOrderDetailQueryLayout.isShown()? View.GONE:View.VISIBLE;
+                rlOrderDetailQueryLayout.setVisibility(isVisibility);
                 break;
             case R.id.btn_account_cash:
                 break;
@@ -115,8 +114,8 @@ public class InquireFragment extends BaseFragment implements View.OnClickListene
             case R.id.btn_help_cul:
                 break;
             case R.id.rl_table_query:
-                break;
-            case R.id.iv_table_mores:
+                int isVisibilitys = rlTableQueryLayout.isShown()? View.GONE:View.VISIBLE;
+                rlTableQueryLayout.setVisibility(isVisibilitys);
                 break;
             case R.id.btn_account_cash_table:
                 break;

@@ -3,7 +3,6 @@
           xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
-
         android:name=".LawApplication"
         android:exported="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity android:name=".activity.mine.AccountManageActivity"/>
+        <activity android:name=".activity.mine.AddAddressActivity"/>
+        <activity android:name=".activity.mine.FeedBackActivity"/>
+        <activity android:name=".activity.mine.PrivateInfoActivity"/>
+        <activity android:name=".activity.mine.SetMessageNotifyActivity"/>
+        <activity android:name=".activity.mine.SettingActivity"/>
+        <activity android:name=".activity.friend.FriendSearchActivity"/>
     </application>
 
 </manifest>

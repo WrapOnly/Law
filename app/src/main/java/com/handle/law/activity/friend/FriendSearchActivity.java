@@ -1,4 +1,4 @@
-package com.handle.law.activity;
+package com.handle.law.activity.friend;
 
 import android.os.Bundle;
 import android.os.Handler;

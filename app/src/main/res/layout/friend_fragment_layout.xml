@@ -106,7 +106,7 @@
             android:background="@drawable/layout_style_transparent_selector"
             android:button="@null"
             android:gravity="center"
-            android:text="动态"
+            android:text="联系人"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:textColor="@android:color/black"

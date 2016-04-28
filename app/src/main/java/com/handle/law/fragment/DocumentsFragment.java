@@ -5,8 +5,12 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.GridView;
+import android.widget.Toast;
 
 import com.handle.law.R;
+import com.handle.law.adapter.document.DocumentsAdapter;
 import com.handle.law.base.BaseFragment;
 
 /**
@@ -22,7 +26,6 @@ public class DocumentsFragment extends BaseFragment implements View.OnClickListe
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        View view = inflater.inflate(R.layout.my_document_fragment_layout, container, false);
         View view = inflater.inflate(R.layout.document_fragment_layout, container, false);
         this.initViews(view);
         this.setListener();

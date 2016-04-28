@@ -1,4 +1,4 @@
-package com.handle.law.fragment;
+package com.handle.law.adapter.document;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -54,10 +54,10 @@ public class DocumentsAdapter extends BaseAdapter {
     }
 
     private static class ViewHolder {
-        public final TextView tvName;
-        public final View convertView;
+        public final TextView   tvName;
+        public final View       convertView;
         public ViewHolder(View _convertView){
-            tvName = (TextView) _convertView.findViewById(R.id.tv_item_name);
+            this.tvName = (TextView) _convertView.findViewById(R.id.tv_item_name);
             this.convertView = _convertView;
         }
     }

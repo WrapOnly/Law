@@ -1,5 +1,6 @@
 package com.handle.law.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -11,6 +12,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.handle.law.R;
+import com.handle.law.activity.mine.PrivateInfoActivity;
+import com.handle.law.activity.mine.SettingActivity;
 import com.handle.law.base.BaseFragment;
 
 /**
@@ -18,21 +21,24 @@ import com.handle.law.base.BaseFragment;
  */
 public class MineFragment extends BaseFragment implements View.OnClickListener{
 
-    private LinearLayout linearAccountLayout;
+    private ImageView       ivQRCodeView;
+    private ImageView       ivSettingView;
 
-    private RelativeLayout rlMyWrokRecordLayout;
-    private RelativeLayout rlMyServiceLayout;
-    private RelativeLayout rlMyNeedLayout;
+    private LinearLayout    linearAccountLayout;
 
-    private RelativeLayout rlMyPhoneLayout;
-    private RelativeLayout rlMyAddressLayout;
+    private RelativeLayout  rlMyWrokRecordLayout;
+    private RelativeLayout  rlMyServiceLayout;
+    private RelativeLayout  rlMyNeedLayout;
 
-    private ImageView ivAvatar;
-    private TextView tvAccountName;
-    private TextView tvInfoDetail;
+    private RelativeLayout  rlMyPhoneLayout;
+    private RelativeLayout  rlMyAddressLayout;
 
-    private TextView tvPhone;
-    private TextView tvAddress;
+    private ImageView       ivAvatar;
+    private TextView        tvAccountName;
+    private TextView        tvInfoDetail;
+
+    private TextView        tvPhone;
+    private TextView        tvAddress;
 
     @Nullable
     @Override
@@ -47,6 +53,8 @@ public class MineFragment extends BaseFragment implements View.OnClickListener{
 
     @Override
     protected void initViews(View _view) {
+        this.ivQRCodeView           = (ImageView) _view.findViewById(R.id.iv_qr_code);
+        this.ivSettingView          = (ImageView) _view.findViewById(R.id.iv_my_settiings);
         this.linearAccountLayout    = (LinearLayout) _view.findViewById(R.id.ll_account);
 
         this.rlMyWrokRecordLayout   = (RelativeLayout) _view.findViewById(R.id.rl_work_record);
@@ -56,9 +64,9 @@ public class MineFragment extends BaseFragment implements View.OnClickListener{
         this.rlMyPhoneLayout        = (RelativeLayout) _view.findViewById(R.id.rl_my_phone);
         this.rlMyAddressLayout      = (RelativeLayout) _view.findViewById(R.id.rl_my_address);
 
-        this.ivAvatar = (ImageView) _view.findViewById(R.id.civ_head);
-        this.tvAccountName = (TextView) _view.findViewById(R.id.tv_account_name);
-        this.tvInfoDetail = (TextView) _view.findViewById(R.id.tv_account_sign);
+        this.ivAvatar       = (ImageView) _view.findViewById(R.id.civ_head);
+        this.tvAccountName  = (TextView) _view.findViewById(R.id.tv_account_name);
+        this.tvInfoDetail   = (TextView) _view.findViewById(R.id.tv_account_sign);
 
         this.tvPhone = (TextView) _view.findViewById(R.id.tv_my_phone);
         this.tvAddress = (TextView) _view.findViewById(R.id.tv_my_address);
@@ -66,12 +74,12 @@ public class MineFragment extends BaseFragment implements View.OnClickListener{
 
     @Override
     protected void setListener() {
+        ivQRCodeView.setOnClickListener(this);
+        ivSettingView.setOnClickListener(this);
         linearAccountLayout.setOnClickListener(this);
-
         rlMyWrokRecordLayout.setOnClickListener(this);
         rlMyServiceLayout.setOnClickListener(this);
         rlMyNeedLayout.setOnClickListener(this);
-
         rlMyPhoneLayout.setOnClickListener(this);
         rlMyAddressLayout.setOnClickListener(this);
     }
@@ -79,8 +87,19 @@ public class MineFragment extends BaseFragment implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.ll_account:
-            break;
+            case R.id.iv_qr_code:
+
+                break;
+            case R.id.iv_my_settiings://去我的设置
+                Intent settingIntent = new Intent(getActivity(), SettingActivity.class);
+                startActivity(settingIntent);
+//                getActivity().overridePendingTransition(R.anim.slide_left_in, R.anim.slide_left_out);
+                break;
+            case R.id.ll_account://到个人信息页面
+                Intent accountIntent = new Intent(getActivity(), PrivateInfoActivity.class);
+                startActivity(accountIntent);
+//                getActivity().overridePendingTransition(R.anim.slide_left_in, R.anim.slide_left_out);
+                break;
             case R.id.rl_work_record:
                 break;
             case R.id.rl_my_service:

@@ -3,8 +3,27 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
-    <TextView
+
+    <LinearLayout
+        android:id="@+id/ll_new_friend_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="联系人"/>
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/ic_launcher"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="新的朋友"/>
+    </LinearLayout>
+    <ExpandableListView
+        android:id="@+id/expand_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:groupIndicator="@mipmap/ic_launcher"
+        android:listSelector="@drawable/layout_style_transparent_selector"/>
 </LinearLayout>

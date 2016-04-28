@@ -1,7 +1,6 @@
 package com.handle.law.activity.mine;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -20,9 +19,9 @@ public class FeedBackActivity extends BaseActivity implements View.OnClickListen
     private EditText  etFeedBack;
 
     @Override
-    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
-
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.feed_back_activity);
         this.initViews();
         this.setListener();
     }

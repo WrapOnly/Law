@@ -14,7 +14,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:src="@mipmap/back"/>
-    <com.webuy.w.components.view.EditTextWithDel
+    <com.handle.law.component.edittext.EditTextWithDel
         android:id="@+id/include_search_et_content"
         android:layout_width="match_parent"
         android:layout_height="32dp"
@@ -22,7 +22,7 @@
         android:layout_toLeftOf="@+id/include_search_tv_action"
         android:background="@drawable/edit_style_selector"
         android:cursorVisible="true"
-        android:hint="@string/contact_search_hint"
+        android:hint=""
         android:imeOptions="actionSearch"
         android:inputType="text"
         android:maxLength="12"

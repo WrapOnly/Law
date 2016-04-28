@@ -1,7 +1,6 @@
 package com.handle.law.activity.mine;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.view.View;
 
 import com.handle.law.R;
@@ -13,8 +12,8 @@ import com.handle.law.base.BaseActivity;
 public class AddAddressActivity extends BaseActivity implements View.OnClickListener {
 
     @Override
-    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.account_add_address_activity);
         this.initViews();
         this.setListener();
