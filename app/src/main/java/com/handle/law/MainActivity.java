@@ -9,10 +9,12 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.handle.law.base.BaseFragmentActivity;
 import com.handle.law.component.view.MainTabView;
 import com.handle.law.constant.MainConstant;
+import com.handle.law.dao.CityDao;
 import com.handle.law.fragment.DocumentsFragment;
 import com.handle.law.fragment.FriendFragment;
 import com.handle.law.fragment.InquireFragment;
@@ -40,6 +42,13 @@ public class MainActivity extends BaseFragmentActivity implements View.OnClickLi
         this.loadFragmentData();
         this.initViews();
         this.setListener();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+//                DBCopyHandle.copyDB2AppFileSystem(MainActivity.this, "city.db");
+            }
+        });
+
     }
 
     @Override

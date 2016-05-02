@@ -33,4 +33,10 @@ public class AddAddressActivity extends BaseActivity implements View.OnClickList
     public void onClick(View v) {
 
     }
+
+    @Override
+    public void onBackPressed() {
+        this.finish();
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+    }
 }

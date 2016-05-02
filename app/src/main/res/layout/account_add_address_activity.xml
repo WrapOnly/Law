@@ -288,7 +288,7 @@
                     android:text="默认地址"
                     android:textColor="@color/acount_name" />
 
-                <com.webuy.w.components.view.togglebutton.ToggleButton
+                <com.handle.law.component.togglebutton.ToggleButton
                     android:id="@+id/ctb_set_default"
                     android:layout_width="60dp"
                     android:layout_height="30dp"

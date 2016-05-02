@@ -100,7 +100,7 @@
         <attr name="emojiconTextLength" format="integer"/>
         <attr name="emojiconUseSystemDefault" format="boolean"/>
     </declare-styleable>
-        <declare-styleable name="swipelistviewstyle">    
+     <declare-styleable name="swipelistviewstyle">
         <attr name="right_width" format="dimension"></attr>  
     </declare-styleable>
 

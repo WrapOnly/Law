@@ -5,9 +5,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.handle.law.R;
 import com.handle.law.base.BaseActivity;
+import com.handle.law.dao.CityDao;
 
 /**
  * Created by Administrator on 2016/4/26.
@@ -53,7 +55,8 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
         this.rlPrivateInfoLayout.setOnClickListener(this);
         this.rlFeedBackLayout.setOnClickListener(this);
         this.rlLogoutLayout.setOnClickListener(this);
-
+        Object[] address =  CityDao.queryProvince();
+        Toast.makeText(this, CityDao.queryProvince()[0].toString(), Toast.LENGTH_SHORT).show();
     }
 
     @Override

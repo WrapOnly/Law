@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipelistviewstyle="http://schemas.android.com/apk/res-auto"
+    style="@style/layout_white_backgroung_style"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:gravity="center_vertical" >
+
+        <TextView
+            style="@style/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我的地址" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/BackButton"
+            android:layout_alignParentTop="true"  />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_header_divide"
+        style="@style/devide_line"
+        android:layout_below="@id/rl_header" />
+
+        <com.handle.law.component.view.SwipeListView
+            android:id="@+id/slv_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:divider="@color/devide_line"
+            android:dividerHeight="0.5dp"
+            android:listSelector="@null"
+            android:layout_below="@+id/tv_header_divide"
+            swipelistviewstyle:right_width="80dp" />
+
+</RelativeLayout>
