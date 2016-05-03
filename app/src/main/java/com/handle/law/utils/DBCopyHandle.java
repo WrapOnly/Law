@@ -1,11 +1,14 @@
 package com.handle.law.utils;
 
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 
 /**
  * Created by Administrator on 2016/5/1.
@@ -39,4 +42,6 @@ public class DBCopyHandle {
         }
         return false;
     }
+
+
 }

@@ -60,4 +60,10 @@ public class SetMessageNotifyActivity extends BaseActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        finish();
+        overridePendingTransition(R.anim.slide_right_in, R.anim.slide_right_out);
+    }
 }

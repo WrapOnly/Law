@@ -15,11 +15,13 @@ import com.handle.law.base.BaseFragmentActivity;
 import com.handle.law.component.view.MainTabView;
 import com.handle.law.constant.MainConstant;
 import com.handle.law.dao.CityDao;
+import com.handle.law.db.base.DBOpenHelper;
 import com.handle.law.fragment.DocumentsFragment;
 import com.handle.law.fragment.FriendFragment;
 import com.handle.law.fragment.InquireFragment;
 import com.handle.law.fragment.MineFragment;
 import com.handle.law.fragment.MyOfficeFragment;
+import com.handle.law.utils.DBCopyHandle;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,10 +47,11 @@ public class MainActivity extends BaseFragmentActivity implements View.OnClickLi
         new Thread(new Runnable() {
             @Override
             public void run() {
-//                DBCopyHandle.copyDB2AppFileSystem(MainActivity.this, "city.db");
+                DBCopyHandle.copyDB2AppFileSystem(MainActivity.this, "city.db");
             }
         });
 
+        DBOpenHelper openHelper = new DBOpenHelper(this, "my", null, 1 );
     }
 
     @Override

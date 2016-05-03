@@ -2,6 +2,7 @@ package com.handle.law.activity.mine;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.handle.law.R;
@@ -13,6 +14,8 @@ import com.handle.law.component.togglebutton.ToggleButton;
  */
 public class PrivateInfoActivity extends BaseActivity {
 
+    //返回键
+    private ImageView       ivBackView;
     //加我时需要验证
     private ToggleButton    addMeVerifyToggleBtn;
     //不让其他人看我
@@ -32,6 +35,7 @@ public class PrivateInfoActivity extends BaseActivity {
 
     @Override
     protected void initViews() {
+        this.ivBackView             = (ImageView) findViewById(R.id.iv_back);
         this.addMeVerifyToggleBtn   = (ToggleButton) findViewById(R.id.tb_message_detail);
         this.limitOhterSeeMeToggleBtn = (ToggleButton) findViewById(R.id.tb_is_limit_other);
         this.imageUpdateToggleBtn   = (ToggleButton) findViewById(R.id.tb_is_show_dynamic_image_update);
@@ -40,6 +44,12 @@ public class PrivateInfoActivity extends BaseActivity {
 
     @Override
     protected void setListener() {
+        this.ivBackView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PrivateInfoActivity.this.onBackPressed();
+            }
+        });
         this.addMeVerifyToggleBtn.setOnToggleChanged(new ToggleButton.OnToggleChanged() {
             @Override
             public void onToggle(boolean isChecked) {
@@ -64,5 +74,12 @@ public class PrivateInfoActivity extends BaseActivity {
 
             }
         });
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        finish();
+        overridePendingTransition(R.anim.slide_right_in, R.anim.slide_right_out);
     }
 }

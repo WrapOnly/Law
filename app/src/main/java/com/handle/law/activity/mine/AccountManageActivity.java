@@ -34,4 +34,10 @@ public class AccountManageActivity extends BaseActivity implements View.OnClickL
     public void onClick(View v) {
 
     }
+
+    @Override
+    public void onBackPressed() {
+        finish();
+        overridePendingTransition(R.anim.slide_right_in, R.anim.slide_right_out);
+    }
 }

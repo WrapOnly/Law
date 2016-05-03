@@ -55,14 +55,15 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
         this.rlPrivateInfoLayout.setOnClickListener(this);
         this.rlFeedBackLayout.setOnClickListener(this);
         this.rlLogoutLayout.setOnClickListener(this);
-        Object[] address =  CityDao.queryProvince();
-        Toast.makeText(this, CityDao.queryProvince()[0].toString(), Toast.LENGTH_SHORT).show();
+//        Object[] address =  CityDao.queryProvince();
+//        Toast.makeText(this, CityDao.queryProvince()[0].toString(), Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.iv_back:
+                this.onBackPressed();
                 break;
             //分享
             case R.id.iv_my_share:
@@ -92,5 +93,11 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
             case R.id.rl_log_out:
                 break;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        finish();
+        overridePendingTransition(R.anim.slide_right_in, R.anim.slide_right_out);
     }
 }

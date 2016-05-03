@@ -43,9 +43,16 @@ public class FeedBackActivity extends BaseActivity implements View.OnClickListen
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.iv_back:
+                this.onBackPressed();
                 break;
             case R.id.tv_send_feed_back:
                 break;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        finish();
+        overridePendingTransition(R.anim.slide_right_in, R.anim.slide_right_out);
     }
 }
