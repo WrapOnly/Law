@@ -60,7 +60,9 @@
     <style name="layout_progress_background_backgroung_style" parent="@android:style/Theme.Holo">
         <item name="android:background">@color/progress_background</item>
     </style>
-
+    <style name="pull_to_refresh_progress_circle">
+        <item name="android:indeterminateDrawable">@drawable/pull_to_refresh_rotate_circle</item>
+    </style>
     <style name="chat_text_date_style">
         <item name="android:padding">2dp</item>
         <item name="android:textColor">#ffffff</item>
