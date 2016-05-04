@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="5dp">
+
+    <ImageView
+        android:id="@+id/dynamic_zone_body_avatar_view"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_centerVertical="true"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginRight="15dp"
+        android:layout_toRightOf="@+id/dynamic_zone_body_avatar_view">
+        <TextView
+            android:id="@+id/tv_post_account_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发布人的昵称"
+            android:textSize="16sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"/>
+        <TextView
+            android:id="@+id/tv_post_date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="今天 16:45"
+            android:textSize="16sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/gray"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_related_action_reply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="回复"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentRight="true"
+        />
+</RelativeLayout>
